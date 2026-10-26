@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="证据的现场：一个面向艺术创作者的跨媒介研究、作品精读、证据核验与材料实验工作台。"
+    />
+    <title>证据的现场 / SITES OF EVIDENCE</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2320251e'/%3E%3Crect x='14' y='14' width='36' height='36' fill='none' stroke='%23d1e65d' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23d1e65d'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="paper-texture" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <aside class="panel overview-panel" aria-label="项目概览">
+        <div class="overview-inner">
+          <p class="eyebrow">FIELD LAB / 001</p>
+          <div class="overview-title-wrap">
+            <p class="overview-kicker">跨学科艺术研究</p>
+            <h1 class="project-title">证据的现场</h1>
+            <p class="project-title-en">SITES OF EVIDENCE</p>
+            <button type="button" class="overview-cta" id="overview-cta" data-open-works>
+              打开作品档案 <span>→</span>
+            </button>
+          </div>
+
+          <p class="overview-intro" id="overview-intro"></p>
+
+          <div class="research-question-block">
+            <div class="section-label">
+              <span>RESEARCH QUESTION</span>
+              <span class="rule"></span>
+              <span>01</span>
+            </div>
+            <p class="lead-question">作品如何从原始材料中形成可辩护的判断？</p>
+          </div>
+
+          <div class="stage-block">
+            <div class="section-label">
+              <span>当前阶段</span>
+              <span class="rule"></span>
+              <span id="current-stage">03 / 实验</span>
+            </div>
+            <p class="stage-copy" id="stage-copy">
+              正在整理作品证据，并把问题转化为可执行的材料测试。
+            </p>
+          </div>
+
+          <nav class="path-list" aria-label="研究路径">
+            <div class="section-label path-heading">
+              <span>EXPLORATION PATH</span>
+              <span class="rule"></span>
+              <span>05 AXES</span>
+            </div>
+            <div id="path-items"></div>
+          </nav>
+
+          <div class="overview-footer">
+            <div>
+              <span class="footer-index" id="footer-work-count">00</span>
+              <span class="footer-label">案例组</span>
+            </div>
+            <div>
+              <span class="footer-index">08</span>
+              <span class="footer-label">新增媒介</span>
+            </div>
+            <div>
+              <span class="footer-index">v0.2</span>
+              <span class="footer-label">证据版</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="panel center-panel" aria-label="工作区">
+        <header class="top-header">
+          <div>
+            <p class="eyebrow">ART RESEARCH WORKBENCH</p>
+            <p class="header-context" id="header-context">视觉机制 / 历史坐标 / 实验设计</p>
+          </div>
+          <div class="utility-links" aria-label="工具">
+            <button type="button" class="text-action" id="filter-action">筛选 FILTER</button>
+            <button type="button" class="text-action" id="reference-action">参考 REFERENCES</button>
+            <button type="button" class="text-action" id="audit-action">检查 AUDIT</button>
+          </div>
+        </header>
+
+        <nav class="main-tabs" aria-label="主要视图" id="main-tabs">
+          <button type="button" class="main-tab" data-view="history">
+            <span>01</span>艺术史框架
+          </button>
+          <button type="button" class="main-tab" data-view="works">
+            <span>02</span>作品精读
+          </button>
+          <button type="button" class="main-tab" data-view="labs">
+            <span>03</span>材料实验
+          </button>
+          <button type="button" class="main-tab" data-view="questions">
+            <span>04</span>研究问题
+          </button>
+          <button type="button" class="main-tab" data-view="progress">
+            <span>05</span>项目推进
+          </button>
+        </nav>
+
+        <div id="center-content" class="center-content" tabindex="-1"></div>
+      </main>
+
+      <aside class="panel lab-panel" aria-label="实验控制台">
+        <div class="lab-panel-head">
+          <p class="eyebrow">ACTIVE EXPERIMENT</p>
+          <div class="lab-state-line">
+            <span class="status-mark" id="lab-status-mark"></span>
+            <span id="lab-status-label">尚未开始</span>
+            <span class="status-spacer"></span>
+            <span id="lab-number">LAB 01</span>
+          </div>
+        </div>
+
+        <div class="active-lab-title">
+          <h2 id="active-lab-title">纸板取景夹具</h2>
+          <p id="active-lab-hypothesis"></p>
+        </div>
+
+        <section class="timer-section" aria-labelledby="timer-heading">
+          <div class="section-label compact">
+            <span id="timer-heading">实验计时</span>
+            <span class="rule"></span>
+            <span id="timer-total">40 MIN</span>
+          </div>
+          <div class="timer-row">
+            <svg class="timer-ring" viewBox="0 0 84 84" aria-hidden="true">
+              <circle class="timer-track" cx="42" cy="42" r="34"></circle>
+              <circle class="timer-progress" id="timer-progress" cx="42" cy="42" r="34"></circle>
+            </svg>
+            <div class="timer-readout">
+              <span id="timer-display">00:00</span>
+              <small id="timer-state">READY</small>
+            </div>
+            <div class="timer-actions">
+              <button type="button" class="square-action" id="timer-toggle">开始</button>
+              <button type="button" class="plain-action" id="timer-reset">归零</button>
+            </div>
+          </div>
+          <button type="button" class="sequence-action" id="run-sequence">
+            运行 4 秒实验序列 <span>PLAY ↗</span>
+          </button>
+        </section>
+
+        <section class="control-section" aria-labelledby="control-heading">
+          <div class="section-label compact">
+            <span id="control-heading">参数控制</span>
+            <span class="rule"></span>
+            <span>LIVE</span>
+          </div>
+          <div id="parameter-controls" class="parameter-controls"></div>
+        </section>
+
+        <section class="materials-section" aria-labelledby="materials-heading">
+          <div class="section-label compact">
+            <span id="materials-heading">材料清单</span>
+            <span class="rule"></span>
+            <span id="materials-count">0/0</span>
+          </div>
+          <div id="material-list" class="material-list"></div>
+        </section>
+
+        <section class="related-section" aria-labelledby="related-heading">
+          <div class="section-label compact">
+            <span id="related-heading">关联作品</span>
+            <span class="rule"></span>
+            <span id="related-count">03</span>
+          </div>
+          <div id="related-works" class="related-works"></div>
+        </section>
+
+        <section class="status-section" aria-labelledby="record-status-heading">
+          <div class="section-label compact">
+            <span id="record-status-heading">实验状态</span>
+            <span class="rule"></span>
+            <span id="saved-label">LOCAL</span>
+          </div>
+          <div class="status-options" id="status-options">
+            <button type="button" data-status="idle">未开始</button>
+            <button type="button" data-status="active">进行中</button>
+            <button type="button" data-status="done">已完成</button>
+          </div>
+          <button type="button" class="primary-action" id="save-record">
+            保存实验记录 <span>↗</span>
+          </button>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="status-bar" aria-label="项目状态">
+      <div class="status-bar-track">
+        <span><b id="status-work-count">00</b> / <b id="status-work-total">00</b> 已读</span>
+        <span>当前实验 <b id="status-lab">LAB 01</b></span>
+        <span>计时 <b id="status-timer">00:00</b></span>
+        <span>进度 <b id="status-progress">00%</b></span>
+        <span class="mobile-hint">横向滑动查看栏目</span>
+        <span class="save-state" id="save-state">自动保存已开启</span>
+        <button type="button" id="export-button">导出研究数据 JSON ↗</button>
+      </div>
+    </footer>
+
+    <nav class="mobile-panel-nav" aria-label="移动端栏目跳转">
+      <button type="button" class="is-active" data-panel-target="overview">项目概览</button>
+      <button type="button" data-panel-target="center">研究中区</button>
+      <button type="button" data-panel-target="lab">实验控制</button>
+    </nav>
+
+    <dialog id="reference-dialog" class="info-dialog">
+      <div class="dialog-head">
+        <p class="eyebrow">REFERENCE SHELF</p>
+        <button type="button" class="dialog-close" data-close-dialog aria-label="关闭">关闭 ×</button>
+      </div>
+      <h2>当前参考资料</h2>
+      <div class="dialog-rule"></div>
+      <div id="reference-content"></div>
+    </dialog>
+
+    <dialog id="audit-dialog" class="info-dialog">
+      <div class="dialog-head">
+        <p class="eyebrow">PROJECT AUDIT</p>
+        <button type="button" class="dialog-close" data-close-dialog aria-label="关闭">关闭 ×</button>
+      </div>
+      <h2>研究检查</h2>
+      <div class="dialog-rule"></div>
+      <div id="audit-content"></div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="data.js"></script>
+    <script src="data-expansion.js"></script>
+    <script src="data-crossmedia-a.js"></script>
+    <script src="data-crossmedia-b.js"></script>
+    <script src="media.js"></script>
+    <script src="media-expansion.js"></script>
+    <script src="public-mode.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
