@@ -467,8 +467,8 @@
 
     const list = filteredWorks();
     const imageCount = DATA.works.filter((work) => Boolean(workMedia(work.id).src)).length;
-    const withheldCount = PUBLIC_EDITION
-      ? DATA.works.filter((work) => workMedia(work.id).status === "rights-held").length
+    const unverifiedCount = PUBLIC_EDITION
+      ? DATA.works.filter((work) => workMedia(work.id).status === "research-preview").length
       : 0;
     const readCount = DATA.works.filter((work) => state.worksRead[work.id]).length;
     els.center.innerHTML = `
@@ -480,7 +480,7 @@
           </div>
           <div>
             <p class="view-summary">用“研究切口 × 媒介世界”交叉筛选 ${DATA.works.length} 组案例。每张卡先给出观看机制，再进入生产条件、制度位置、原始材料与创作转译。</p>
-            <p class="view-meta">${list.length} VISIBLE / ${PUBLIC_EDITION ? `${imageCount} PUBLIC IMAGES / ${withheldCount} RIGHTS HELD` : `${imageCount} VERIFIED IMAGES`} / ${String(DATA.fields.length).padStart(2, "0")} MEDIA WORLDS / ${readCount} READ</p>
+            <p class="view-meta">${list.length} VISIBLE / ${PUBLIC_EDITION ? `${imageCount} STUDY IMAGES / ${unverifiedCount} RIGHTS UNVERIFIED` : `${imageCount} VERIFIED IMAGES`} / ${String(DATA.fields.length).padStart(2, "0")} MEDIA WORLDS / ${readCount} READ</p>
           </div>
         </header>
 

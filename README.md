@@ -2,7 +2,8 @@
 
 Public research edition.
 
-- Cases: 66
-- Public images: 49
-- Research-preview images are withheld from the public build.
+- Cases: 74
+- Study-reference images: 74
+- Images marked research-preview are presented only for study, commentary, and research.
+- Copyright remains with the original artists and institutions; commercial reuse is prohibited.
 - Image credits and official object-page links remain in each case detail.

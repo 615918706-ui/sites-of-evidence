@@ -7,12 +7,10 @@
   window.PUBLIC_EDITION = true;
   document.documentElement.dataset.edition = "public";
 
-  const withheld = [];
+  const researchOnly = [];
   for (const [id, item] of Object.entries(window.WORK_MEDIA || {})) {
     if (item.status === "research-preview") {
-      withheld.push(id);
-      item.src = null;
-      item.status = "rights-held";
+      researchOnly.push(id);
     }
   }
 
@@ -22,8 +20,8 @@
     const note = document.createElement("div");
     note.className = "public-edition-note";
     note.innerHTML = `
-      <strong>PUBLIC EDITION / 公开研究版</strong>
-      <span>${withheld.length} 张图像因权利状态仅保留于研究版；本页仍可检索全部案例、来源、反方与证据缺口。</span>
+      <strong>STUDY EDITION / 学习研究版</strong>
+      <span>${researchOnly.length} 张图像为未完成公开授权核查的研究预览。本页仅用于学习、评论与研究，版权归原作者及机构，禁止商业再使用。</span>
     `;
     header.insertAdjacentElement("afterend", note);
   });

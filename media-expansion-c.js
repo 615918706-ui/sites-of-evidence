@@ -1,0 +1,58 @@
+Object.assign(window.WORK_MEDIA, {
+  w81: {
+    src: "assets/works/w81.jpg",
+    credit: "Museo Nacional del Prado / Wikimedia Commons · Public domain",
+    imageSource: "https://commons.wikimedia.org/wiki/File:El_Tres_de_Mayo,_by_Francisco_de_Goya,_from_Prado_thin_black_margin.jpg",
+    viewType: "artwork",
+    status: "open",
+  },
+  w82: {
+    src: "assets/works/w82.jpg",
+    credit: "The Met Open Access / Wikimedia Commons · CC0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:The_Burghers_of_Calais_MET_DP221863.jpg",
+    viewType: "object",
+    status: "open",
+  },
+  w83: {
+    src: "assets/works/w83.jpg",
+    credit: "Jewish Museum Berlin, exterior detail / Wikimedia Commons · CC BY-SA 3.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Berlin-_Jewish_Museum_-_3085.jpg",
+    viewType: "site-detail",
+    status: "licensed",
+  },
+  w84: {
+    src: "assets/works/w84.jpg",
+    credit: "Ballets Russes costume display, Petit Palais / Wikimedia Commons · CC BY 2.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:%22Le_Sacre_du_Printemps%22par_les_Ballets_russes_(Petit_Palais,_Paris)_(53394263333).png",
+    viewType: "costume-display",
+    status: "licensed",
+  },
+  w85: {
+    src: "assets/works/w85.jpg",
+    credit: "Maya Deren / Alexander Hammid, film still / Wikimedia Commons · Public domain",
+    imageSource: "https://commons.wikimedia.org/wiki/File:Meshes_of_the_Afternoon_1.png",
+    viewType: "film-still",
+    status: "open",
+  },
+  w86: {
+    src: "assets/works/w86.jpg",
+    credit: "The Met Open Access / Wikimedia Commons · CC0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:MET_DP214861.jpg",
+    viewType: "object",
+    status: "open",
+  },
+  w87: {
+    src: "assets/works/w87.jpg",
+    credit: "7000 Eichen vor Fridericianum / Wikimedia Commons · CC BY-SA 4.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:7000_Eichen_vor_Fridericianum.jpg",
+    viewType: "site-view",
+    status: "licensed",
+  },
+  w88: {
+    src: "assets/works/w88.jpg",
+    credit: "Nam June Paik, TV Buddha / Wikimedia Commons · CC BY 2.0",
+    imageSource: "https://commons.wikimedia.org/wiki/File:TV_Buddha.jpg",
+    viewType: "installation-view",
+    status: "licensed",
+  },
+});
